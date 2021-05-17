@@ -32,7 +32,7 @@ jobs:
         with:
           args: arg1 arg2
         env:
-          REMOTE_BASH_URL: https://raw.githubusercontent.com/diberry/npm-workshape-github-action-test-1/main/scripts/recursive-dir-listing.sh
+          REMOTE_BASH_URL: https://raw.githubusercontent.com/diberry/npm-workshape-github-action-test-1/main/recursive-dir-listing.sh
       - name: Content list
         uses: enricomarino/actions@v2
       - name: 'Deploy to Azure WebApp ${{ env.AZURE_WEBAPP_NAME }} at path $${{ env.AZURE_WEBAPP_PACKAGE_PATH }}'
