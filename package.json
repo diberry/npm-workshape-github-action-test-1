@@ -1,0 +1,22 @@
+{
+  "name": "js-e2e-npm-workspaces",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run prep:middleware && npm run prep:client",
+    "prep:middleware": "ls && cd ./packages/middleware && npm install && cd .. ",
+    "prep:client": "ls && cd ./packages/react-client-app-1 && npm install",
+    "build": "cd ./packages/react-client-app-1 && npm run build",
+    "start": "ls & cd ./packages/react-client-app-1 && npm start"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "./packages/middleware"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  }
+}
